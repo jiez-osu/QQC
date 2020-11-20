@@ -1,0 +1,53 @@
+(' Code encoder : ', 'bilstm')
+(' Dropout : ', 0.35)
+(' Embedding size : ', 200)
+(' LSTM hidden dimension : ', 400)
+(' Margin: ', 0.05)
+(' Optimizer: ', 'adam')
+ Model Directory : 
+../checkpoint_qcwqq/QQ/qtlen_20_codelen_120_qtnwords_15930_codenwords_128538_batch_256_optimizer_adam_lr_001_embsize_200_lstmdims_400_bowdropout_35_seqencdropout_35_codeenc_bilstm
+Building QQ Model
+('model: ', QQModel(
+  (query_encoder): SeqEncoder(
+    (embedding): Embedding(15930, 200, padding_idx=0)
+    (lstm): LSTM(200, 400, batch_first=True, bidirectional=True)
+  )
+  (cand_encoder): SeqEncoder(
+    (embedding): Embedding(15930, 200, padding_idx=0)
+    (lstm): LSTM(200, 400, batch_first=True, bidirectional=True)
+  )
+))
+Reloading saved model for evaluating/collecting results
+using GPU
+
+Parameter requires_grad state: 
+query_encoder.embedding.weight True
+query_encoder.lstm.weight_ih_l0 True
+query_encoder.lstm.weight_hh_l0 True
+query_encoder.lstm.bias_ih_l0 True
+query_encoder.lstm.bias_hh_l0 True
+query_encoder.lstm.weight_ih_l0_reverse True
+query_encoder.lstm.weight_hh_l0_reverse True
+query_encoder.lstm.bias_ih_l0_reverse True
+query_encoder.lstm.bias_hh_l0_reverse True
+cand_encoder.embedding.weight True
+cand_encoder.lstm.weight_ih_l0 True
+cand_encoder.lstm.weight_hh_l0 True
+cand_encoder.lstm.bias_ih_l0 True
+cand_encoder.lstm.bias_hh_l0 True
+cand_encoder.lstm.weight_ih_l0_reverse True
+cand_encoder.lstm.weight_hh_l0_reverse True
+cand_encoder.lstm.bias_ih_l0_reverse True
+cand_encoder.lstm.bias_hh_l0_reverse True
+
+Recommend lr 0.001 for Adam while using 0.00100.
+Evaluating Model
+Pool size = 50
+vocabulary size: 15930
+Loading question duplication dataset ...
+Loading QQ matching for development ...
+1085 entries
+Loading QQ matching for testing ...
+1447 entries
+Size=1085, ACC=1.0, MRR=0.403737492663, MAP=0.4030664134, nDCG=0.528944924497
+Size=1447, ACC=1.0, MRR=0.391244173941, MAP=0.388198884011, nDCG=0.516966668338

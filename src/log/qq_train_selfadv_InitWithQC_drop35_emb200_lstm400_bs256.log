@@ -1,0 +1,348 @@
+Warning: Train overrides previously saved model, if it had exactly the same parameters
+If retraining the model from previous check point, set reload >0 to start training from previous checkpoint
+(' Code encoder : ', 'bilstm')
+(' Dropout : ', 0.35)
+(' Embedding size : ', 200)
+(' LSTM hidden dimension : ', 400)
+(' Margin: ', 0.05)
+(' Optimizer: ', 'adam')
+ Model Directory :
+../checkpoint_qcwqq/QQ_selfadv/qtlen_20_codelen_120_qtnwords_15930_codenwords_128538_batch_256_optimizer_adam_lr_001_embsize_200_lstmdims_400_bowdropout_35_seqencdropout_35_codeenc_bilstm
+ Summary Directory : ../run_qcwqq/QQ_selfadv/qtlen_20_codelen_120_qtnwords_15930_codenwords_128538_batch_256_optimizer_adam_lr_001_embsize_200_lstmdims_400_bowdropout_35_seqencdropout_35_codeenc_bilstm
+Building QQ Model
+('model: ', QQModel(
+  (query_encoder): SeqEncoder(
+    (embedding): Embedding(15930, 200, padding_idx=0)
+    (lstm): LSTM(200, 400, batch_first=True, bidirectional=True)
+  )
+  (cand_encoder): SeqEncoder(
+    (embedding): Embedding(15930, 200, padding_idx=0)
+    (lstm): LSTM(200, 400, batch_first=True, bidirectional=True)
+  )
+))
+Reloading saved model for Re-training
+using GPU
+
+Parameter requires_grad state:
+query_encoder.embedding.weight True
+query_encoder.lstm.weight_ih_l0 True
+query_encoder.lstm.weight_hh_l0 True
+query_encoder.lstm.bias_ih_l0 True
+query_encoder.lstm.bias_hh_l0 True
+query_encoder.lstm.weight_ih_l0_reverse True
+query_encoder.lstm.weight_hh_l0_reverse True
+query_encoder.lstm.bias_ih_l0_reverse True
+query_encoder.lstm.bias_hh_l0_reverse True
+cand_encoder.embedding.weight True
+cand_encoder.lstm.weight_ih_l0 True
+cand_encoder.lstm.weight_hh_l0 True
+cand_encoder.lstm.bias_ih_l0 True
+cand_encoder.lstm.bias_hh_l0 True
+cand_encoder.lstm.weight_ih_l0_reverse True
+cand_encoder.lstm.weight_hh_l0_reverse True
+cand_encoder.lstm.bias_ih_l0_reverse True
+cand_encoder.lstm.bias_hh_l0_reverse True
+
+Recommend lr 0.001 for Adam while using 0.00100.
+Training Model with Adversarial Sampling
+vocabulary size: 15930
+Loading question duplication dataset ...
+Loading QQ matching for training ...
+1085 entries
+Loading QQ matching for development ...
+1085 entries
+Size=1085, ACC=1.0, MRR=0.713949895758, MAP=0.712789390517, nDCG=0.779103206184
+validating..
+Size=1085, ACC=1.0, MRR=0.710264823782, MAP=0.709479033791, nDCG=0.7766883019
+("Model didn't improve for ", 1, ' epochs')
+validating..
+Size=1085, ACC=1.0, MRR=0.710199066101, MAP=0.709291443685, nDCG=0.776587594551
+("Model didn't improve for ", 2, ' epochs')
+validating..
+Size=1085, ACC=1.0, MRR=0.708953769322, MAP=0.708009473474, nDCG=0.77555227325
+("Model didn't improve for ", 3, ' epochs')
+validating..
+Size=1085, ACC=1.0, MRR=0.709556929337, MAP=0.70860163135, nDCG=0.775982903518
+("Model didn't improve for ", 4, ' epochs')
+validating..
+Size=1085, ACC=1.0, MRR=0.709707390742, MAP=0.708661673171, nDCG=0.776069029193
+("Model didn't improve for ", 5, ' epochs')
+validating..
+Size=1085, ACC=1.0, MRR=0.709917326389, MAP=0.708879049918, nDCG=0.776185344047
+("Model didn't improve for ", 6, ' epochs')
+validating..
+Size=1085, ACC=1.0, MRR=0.707391225374, MAP=0.706413971049, nDCG=0.7742628898
+("Model didn't improve for ", 7, ' epochs')
+validating..
+Size=1085, ACC=1.0, MRR=0.705115769057, MAP=0.704393066036, nDCG=0.772674590809
+("Model didn't improve for ", 8, ' epochs')
+validating..
+Size=1085, ACC=1.0, MRR=0.706551975673, MAP=0.705936028195, nDCG=0.773821997442
+("Model didn't improve for ", 9, ' epochs')
+validating..
+Size=1085, ACC=1.0, MRR=0.709535343723, MAP=0.708950545776, nDCG=0.776143713192
+("Model didn't improve for ", 10, ' epochs')
+validating..
+Size=1085, ACC=1.0, MRR=0.709000830732, MAP=0.708535677134, nDCG=0.775781300525
+("Model didn't improve for ", 11, ' epochs')
+validating..
+Size=1085, ACC=1.0, MRR=0.707044029476, MAP=0.706469931207, nDCG=0.774322832568
+("Model didn't improve for ", 12, ' epochs')
+validating..
+Size=1085, ACC=1.0, MRR=0.707909023013, MAP=0.707221599844, nDCG=0.774912219134
+("Model didn't improve for ", 13, ' epochs')
+validating..
+Size=1085, ACC=1.0, MRR=0.707936657353, MAP=0.707108669987, nDCG=0.774834680689
+("Model didn't improve for ", 14, ' epochs')
+validating..
+Size=1085, ACC=1.0, MRR=0.707125914044, MAP=0.706298392162, nDCG=0.77435136002
+("Model didn't improve for ", 15, ' epochs')
+validating..
+Size=1085, ACC=1.0, MRR=0.707799819497, MAP=0.706911576845, nDCG=0.774793409211
+("Model didn't improve for ", 16, ' epochs')
+validating..
+Size=1085, ACC=1.0, MRR=0.707880754735, MAP=0.707088773614, nDCG=0.774911170015
+("Model didn't improve for ", 17, ' epochs')
+validating..
+Size=1085, ACC=1.0, MRR=0.70732717713, MAP=0.706741485384, nDCG=0.77468985776
+("Model didn't improve for ", 18, ' epochs')
+validating..
+Size=1085, ACC=1.0, MRR=0.710018952074, MAP=0.709436539575, nDCG=0.776759218367
+("Model didn't improve for ", 19, ' epochs')
+validating..
+Size=1085, ACC=1.0, MRR=0.709063101951, MAP=0.708173980122, nDCG=0.775857225663
+("Model didn't improve for ", 20, ' epochs')
+validating..
+Size=1085, ACC=1.0, MRR=0.711062448377, MAP=0.71017076222, nDCG=0.777435131277
+("Model didn't improve for ", 21, ' epochs')
+validating..
+Size=1085, ACC=1.0, MRR=0.711084329447, MAP=0.710113819589, nDCG=0.777428640617
+("Model didn't improve for ", 22, ' epochs')
+validating..
+Size=1085, ACC=1.0, MRR=0.712688826495, MAP=0.711541617755, nDCG=0.77860998866
+("Model didn't improve for ", 23, ' epochs')
+validating..
+Size=1085, ACC=1.0, MRR=0.713193809205, MAP=0.712068323287, nDCG=0.7789800379
+("Model didn't improve for ", 24, ' epochs')
+validating..
+Size=1085, ACC=1.0, MRR=0.711980131823, MAP=0.710800806351, nDCG=0.777954295923
+("Model didn't improve for ", 25, ' epochs')
+validating..
+Size=1085, ACC=1.0, MRR=0.711373519312, MAP=0.710175333036, nDCG=0.777447587769
+("Model didn't improve for ", 26, ' epochs')
+validating..
+Size=1085, ACC=1.0, MRR=0.709270084046, MAP=0.708086055359, nDCG=0.775880396068
+("Model didn't improve for ", 27, ' epochs')
+validating..
+Size=1085, ACC=1.0, MRR=0.712853372657, MAP=0.711693482658, nDCG=0.778566772187
+("Model didn't improve for ", 28, ' epochs')
+validating..
+Size=1085, ACC=1.0, MRR=0.711908895479, MAP=0.71085205377, nDCG=0.777885846893
+("Model didn't improve for ", 29, ' epochs')
+validating..
+Size=1085, ACC=1.0, MRR=0.714266633824, MAP=0.713133409656, nDCG=0.779552496855
+Model improved. Saved model at 31 epoch
+validating..
+Size=1085, ACC=1.0, MRR=0.712238306871, MAP=0.711041676294, nDCG=0.777962651545
+("Model didn't improve for ", 1, ' epochs')
+validating..
+Size=1085, ACC=1.0, MRR=0.715178936781, MAP=0.714113775665, nDCG=0.780309424062
+Model improved. Saved model at 33 epoch
+validating..
+Size=1085, ACC=1.0, MRR=0.71765519324, MAP=0.716625902552, nDCG=0.782202963486
+Model improved. Saved model at 34 epoch
+validating..
+Size=1085, ACC=1.0, MRR=0.718060013614, MAP=0.717055001601, nDCG=0.78255971605
+Model improved. Saved model at 35 epoch
+validating..
+Size=1085, ACC=1.0, MRR=0.718238594561, MAP=0.717202283694, nDCG=0.782648702779
+Model improved. Saved model at 36 epoch
+validating..
+Size=1085, ACC=1.0, MRR=0.717809991794, MAP=0.716738514183, nDCG=0.78237207041
+("Model didn't improve for ", 1, ' epochs')
+validating..
+Size=1085, ACC=1.0, MRR=0.716491047532, MAP=0.715336181728, nDCG=0.781369867022
+("Model didn't improve for ", 2, ' epochs')
+validating..
+Size=1085, ACC=1.0, MRR=0.715489737334, MAP=0.714416402901, nDCG=0.780647955294
+("Model didn't improve for ", 3, ' epochs')
+validating..
+Size=1085, ACC=1.0, MRR=0.71869175494, MAP=0.71767901314, nDCG=0.78307810937
+Model improved. Saved model at 40 epoch
+validating..
+Size=1085, ACC=1.0, MRR=0.718247947534, MAP=0.717192688728, nDCG=0.782724595694
+("Model didn't improve for ", 1, ' epochs')
+validating..
+Size=1085, ACC=1.0, MRR=0.71682092492, MAP=0.715855926017, nDCG=0.781586594941
+("Model didn't improve for ", 2, ' epochs')
+validating..
+Size=1085, ACC=1.0, MRR=0.715951802215, MAP=0.715120138554, nDCG=0.780935049122
+("Model didn't improve for ", 3, ' epochs')
+validating..
+Size=1085, ACC=1.0, MRR=0.716732288862, MAP=0.715942795013, nDCG=0.781611544302
+("Model didn't improve for ", 4, ' epochs')
+validating..
+Size=1085, ACC=1.0, MRR=0.714031720704, MAP=0.713214192003, nDCG=0.779500050716
+("Model didn't improve for ", 5, ' epochs')
+validating..
+Size=1085, ACC=1.0, MRR=0.717000278679, MAP=0.716203029737, nDCG=0.781732837111
+("Model didn't improve for ", 6, ' epochs')
+validating..
+Size=1085, ACC=1.0, MRR=0.71701698957, MAP=0.716055566752, nDCG=0.781649409153
+("Model didn't improve for ", 7, ' epochs')
+validating..
+Size=1085, ACC=1.0, MRR=0.712134561054, MAP=0.711142461284, nDCG=0.777977582347
+("Model didn't improve for ", 8, ' epochs')
+validating..
+Size=1085, ACC=1.0, MRR=0.714798558732, MAP=0.713760827049, nDCG=0.779985822995
+("Model didn't improve for ", 9, ' epochs')
+validating..
+Size=1085, ACC=1.0, MRR=0.714579884915, MAP=0.713581055275, nDCG=0.779858869732
+("Model didn't improve for ", 10, ' epochs')
+validating..
+Size=1085, ACC=1.0, MRR=0.715513938089, MAP=0.714471585664, nDCG=0.780568049549
+("Model didn't improve for ", 11, ' epochs')
+validating..
+Size=1085, ACC=1.0, MRR=0.717030876875, MAP=0.715987389402, nDCG=0.781742377474
+("Model didn't improve for ", 12, ' epochs')
+validating..
+Size=1085, ACC=1.0, MRR=0.718248563117, MAP=0.717303011099, nDCG=0.782652342227
+("Model didn't improve for ", 13, ' epochs')
+validating..
+Size=1085, ACC=1.0, MRR=0.72104244539, MAP=0.719986421339, nDCG=0.78466993305
+Model improved. Saved model at 54 epoch
+validating..
+Size=1085, ACC=1.0, MRR=0.721517933694, MAP=0.720507362614, nDCG=0.785007182851
+Model improved. Saved model at 55 epoch
+validating..
+Size=1085, ACC=1.0, MRR=0.718927620772, MAP=0.717858675678, nDCG=0.782976085286
+("Model didn't improve for ", 1, ' epochs')
+validating..
+Size=1085, ACC=1.0, MRR=0.717112968996, MAP=0.716072353825, nDCG=0.781600548308
+("Model didn't improve for ", 2, ' epochs')
+validating..
+Size=1085, ACC=1.0, MRR=0.715994083874, MAP=0.71484509485, nDCG=0.780751093929
+("Model didn't improve for ", 3, ' epochs')
+validating..
+Size=1085, ACC=1.0, MRR=0.714924899479, MAP=0.713666920622, nDCG=0.779887741218
+("Model didn't improve for ", 4, ' epochs')
+validating..
+Size=1085, ACC=1.0, MRR=0.715530928805, MAP=0.714333296668, nDCG=0.780356649626
+("Model didn't improve for ", 5, ' epochs')
+validating..
+Size=1085, ACC=1.0, MRR=0.715985136015, MAP=0.714789761175, nDCG=0.78069858332
+("Model didn't improve for ", 6, ' epochs')
+validating..
+Size=1085, ACC=1.0, MRR=0.713543169485, MAP=0.71240411825, nDCG=0.778957480231
+("Model didn't improve for ", 7, ' epochs')
+validating..
+Size=1085, ACC=1.0, MRR=0.713598648449, MAP=0.71247537656, nDCG=0.778931058243
+("Model didn't improve for ", 8, ' epochs')
+validating..
+Size=1085, ACC=1.0, MRR=0.71319463609, MAP=0.712076806955, nDCG=0.778620434389
+("Model didn't improve for ", 9, ' epochs')
+validating..
+Size=1085, ACC=1.0, MRR=0.713175642417, MAP=0.712061867895, nDCG=0.778660030817
+("Model didn't improve for ", 10, ' epochs')
+validating..
+Size=1085, ACC=1.0, MRR=0.715859529931, MAP=0.714752538181, nDCG=0.780730858747
+("Model didn't improve for ", 11, ' epochs')
+validating..
+Size=1085, ACC=1.0, MRR=0.715566764905, MAP=0.714467453647, nDCG=0.780517679863
+("Model didn't improve for ", 12, ' epochs')
+validating..
+Size=1085, ACC=1.0, MRR=0.716059224268, MAP=0.715046958581, nDCG=0.780932235497
+("Model didn't improve for ", 13, ' epochs')
+validating..
+Size=1085, ACC=1.0, MRR=0.718541074609, MAP=0.717310322211, nDCG=0.782613332315
+("Model didn't improve for ", 14, ' epochs')
+validating..
+Size=1085, ACC=1.0, MRR=0.71726111583, MAP=0.715883188315, nDCG=0.781614472718
+("Model didn't improve for ", 15, ' epochs')
+validating..
+Size=1085, ACC=1.0, MRR=0.718044724284, MAP=0.716675719693, nDCG=0.782163688133
+("Model didn't improve for ", 16, ' epochs')
+validating..
+Size=1085, ACC=1.0, MRR=0.721234334847, MAP=0.719843983008, nDCG=0.784560831961
+("Model didn't improve for ", 17, ' epochs')
+validating..
+Size=1085, ACC=1.0, MRR=0.719416424139, MAP=0.718060927781, nDCG=0.783261249239
+("Model didn't improve for ", 18, ' epochs')
+validating..
+Size=1085, ACC=1.0, MRR=0.720192771748, MAP=0.719048838021, nDCG=0.783947815076
+("Model didn't improve for ", 19, ' epochs')
+validating..
+Size=1085, ACC=1.0, MRR=0.720282026454, MAP=0.718916518839, nDCG=0.783881978202
+("Model didn't improve for ", 20, ' epochs')
+validating..
+Size=1085, ACC=1.0, MRR=0.719799595713, MAP=0.718415634969, nDCG=0.783445397147
+("Model didn't improve for ", 21, ' epochs')
+validating..
+Size=1085, ACC=1.0, MRR=0.719202908731, MAP=0.717786878566, nDCG=0.78296163693
+("Model didn't improve for ", 22, ' epochs')
+validating..
+Size=1085, ACC=1.0, MRR=0.719002443229, MAP=0.717546504627, nDCG=0.782726412383
+("Model didn't improve for ", 23, ' epochs')
+validating..
+Size=1085, ACC=1.0, MRR=0.718307421591, MAP=0.716835024794, nDCG=0.782205344945
+("Model didn't improve for ", 24, ' epochs')
+validating..
+Size=1085, ACC=1.0, MRR=0.719043221818, MAP=0.717709944617, nDCG=0.782886683484
+("Model didn't improve for ", 25, ' epochs')
+validating..
+Size=1085, ACC=1.0, MRR=0.717768458855, MAP=0.716578557674, nDCG=0.781945245502
+("Model didn't improve for ", 26, ' epochs')
+validating..
+Size=1085, ACC=1.0, MRR=0.717696233541, MAP=0.716500846295, nDCG=0.781951161883
+("Model didn't improve for ", 27, ' epochs')
+validating..
+Size=1085, ACC=1.0, MRR=0.71605876568, MAP=0.714851573615, nDCG=0.780762361199
+("Model didn't improve for ", 28, ' epochs')
+validating..
+Size=1085, ACC=1.0, MRR=0.716709088803, MAP=0.715622927633, nDCG=0.781380991356
+("Model didn't improve for ", 29, ' epochs')
+validating..
+Size=1085, ACC=1.0, MRR=0.716874727646, MAP=0.715713756493, nDCG=0.781379312794
+("Model didn't improve for ", 30, ' epochs')
+validating..
+Size=1085, ACC=1.0, MRR=0.71658000009, MAP=0.715410650219, nDCG=0.781163797537
+("Model didn't improve for ", 31, ' epochs')
+validating..
+Size=1085, ACC=1.0, MRR=0.718817801289, MAP=0.717654835204, nDCG=0.782806860549
+("Model didn't improve for ", 32, ' epochs')
+validating..
+Size=1085, ACC=1.0, MRR=0.719449209677, MAP=0.718135725907, nDCG=0.783226726377
+("Model didn't improve for ", 33, ' epochs')
+validating..
+Size=1085, ACC=1.0, MRR=0.720348192157, MAP=0.719113310209, nDCG=0.784005790237
+("Model didn't improve for ", 34, ' epochs')
+validating..
+Size=1085, ACC=1.0, MRR=0.72339167921, MAP=0.72225289484, nDCG=0.786466524641
+Model improved. Saved model at 90 epoch
+validating..
+Size=1085, ACC=1.0, MRR=0.723328394412, MAP=0.722237543908, nDCG=0.786482727725
+("Model didn't improve for ", 1, ' epochs')
+validating..
+Size=1085, ACC=1.0, MRR=0.723009073603, MAP=0.72191718882, nDCG=0.786203575167
+("Model didn't improve for ", 2, ' epochs')
+validating..
+Size=1085, ACC=1.0, MRR=0.723068285914, MAP=0.721916915523, nDCG=0.786175682018
+("Model didn't improve for ", 3, ' epochs')
+validating..
+Size=1085, ACC=1.0, MRR=0.720848204959, MAP=0.719961761135, nDCG=0.784621976186
+("Model didn't improve for ", 4, ' epochs')
+validating..
+Size=1085, ACC=1.0, MRR=0.719297920364, MAP=0.718486361332, nDCG=0.783414297738
+("Model didn't improve for ", 5, ' epochs')
+validating..
+Size=1085, ACC=1.0, MRR=0.71890313891, MAP=0.718091275523, nDCG=0.783102840108
+("Model didn't improve for ", 6, ' epochs')
+validating..
+Size=1085, ACC=1.0, MRR=0.719739337562, MAP=0.718785765693, nDCG=0.783661087685
+("Model didn't improve for ", 7, ' epochs')
+validating..
+Size=1085, ACC=1.0, MRR=0.718666483334, MAP=0.717712911465, nDCG=0.78291648675
+("Model didn't improve for ", 8, ' epochs')
+validating..
+Size=1085, ACC=1.0, MRR=0.718120456534, MAP=0.717135993089, nDCG=0.782466813386
+("Model didn't improve for ", 9, ' epochs')
